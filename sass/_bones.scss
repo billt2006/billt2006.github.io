@@ -52,7 +52,6 @@ img {
 		padding-top: 2em;
 		@include breakpoint(yoda) {
 			padding-top: 0;
-			padding-left: $pad;
 		}
 	}
 

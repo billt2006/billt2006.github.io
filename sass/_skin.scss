@@ -54,8 +54,8 @@ a:active, a:focus, a:hover {
 }
 
 .about-me {
-	background: $white;
-	background: rgba($grey, 0.4);
+	background: darken($white, 20%);
+	background: rgba(darken($white, 20%), 0.6);
 	border-radius: 0.5em 0.5em;
 	@include breakpoint(yoda) {
 		border-radius: 0 0;
