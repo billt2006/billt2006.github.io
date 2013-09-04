@@ -1,0 +1,72 @@
+@import "mixins";
+
+$sansFamily_yoda: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$sansFamily: "Open Sans", $sansFamily_yoda;
+
+body {
+	font-family: $sansFamily;
+	@include breakpoint(yoda) {
+		font-family: $sansFamily_yoda;
+	}
+}
+
+.title-wrapper {
+	font-size: 2.5em;
+	@include breakpoint(obiwan) {
+		font-size: 2em;
+	}
+	@include breakpoint(luke) {
+		font-size: 1.5em;
+	}
+
+	.title, .subtitle {
+		font-family: "Reenie Beanie";
+		font-weight: normal;
+		@include breakpoint(yoda) {
+			text-align: center;
+		}
+	}
+}
+
+.about-me {
+	line-height: 1.6;
+}
+
+.social-block {
+	text-decoration: none;
+	font-size: 1.25em;
+}
+
+.find-me {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.resume {
+	.address {
+		text-align: right;
+		@include breakpoint(yoda) {
+			text-align: center;
+		}
+	}
+
+	.section-title {
+		text-transform: uppercase;
+	}
+
+	.company {
+		font-size: 1.2em;
+	}
+
+	.date, .title {
+		font-weight: bold;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
