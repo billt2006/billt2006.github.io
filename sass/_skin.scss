@@ -101,15 +101,6 @@ a:active, a:focus, a:hover {
 		color: $white;
 		text-shadow: darken($grey, 20%) 1px 1px 0;
 
-		.icon-codepen {
-			display: inline-block;
-			width: 1em;
-			height: 1em;
-			background: url(/images/codepen.png);
-	  		background-image: url(/images/codepen.svg), none;
-	  		background-size: 100% 100%;
-	  	}
-
 		&:focus, &:hover {
 			box-shadow: inset 0 0 2em darken($grey, 20%);
 		}
