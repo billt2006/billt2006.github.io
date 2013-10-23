@@ -64,51 +64,23 @@ a:active, a:focus, a:hover {
 
 .social-block {
 	&.twitter {
-		background: $twitterBlue;
-		border-color: darken($twitterBlue, 20%);
 		color: $white;
-		text-shadow: darken($twitterBlue, 20%) 1px 1px 0;
-
-		&:focus, &:hover {
-			box-shadow: inset 0 0 2em darken($twitterBlue, 20%);
-		}
-
-		&:active {
-			background: darken($twitterBlue, 20%);
-			box-shadow: inset 0 0 2em $twitterBlue;
-		}
+		@include socialLink($twitterColor);
 	}
 
 	&.github {
-		background: $white;
-		border-color: darken($white, 20%);
 		color: $black;
-		text-shadow: darken($white, 20%) 1px 1px 0;
-
-		&:focus, &:hover {
-			box-shadow: inset 0 0 2em darken($white, 20%);
-		}
-
-		&:active {
-			background: darken($white, 20%);
-			box-shadow: inset 0 0 2em $white;
-		}
+		@include socialLink($githubColor);
 	}
 
 	&.codepen {
-		background: $grey;
-		border-color: darken($grey, 20%);
 		color: $white;
-		text-shadow: darken($grey, 20%) 1px 1px 0;
+		@include socialLink($codepenColor);
+	}
 
-		&:focus, &:hover {
-			box-shadow: inset 0 0 2em darken($grey, 20%);
-		}
-
-		&:active {
-			background: darken($grey, 20%);
-			box-shadow: inset 0 0 2em $grey;
-		}
+	&.linkedin {
+		color: $white;
+		@include socialLink($linkedinColor);
 	}
 }
 
