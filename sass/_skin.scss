@@ -84,37 +84,6 @@ a:active, a:focus, a:hover {
 	}
 }
 
-.resume {
-	background: $white;
-	box-shadow: 0 0 1em darken($grey, 20%);
-
-	ul {
-		list-style: square;
-	}
-
-	.contact {
-		border-bottom: 0.75em solid $blueAqua;
-		@include breakpoint(yoda) {
-			border-bottom: none;
-		}
-	}
-
-	.name {
-		border-bottom: none;
-		@include breakpoint(yoda) {
-			border-bottom: 0.75em solid $blueAqua;
-		}
-	}
-
-	.section-title {
-		border-bottom: 0.25em solid $blueDeeper;
-	}
-
-	.date {
-		color: $grey;
-	}
-}
-
 .site-footer {
 	background: $grey;
 	background: linear-gradient(to bottom, rgba($grey,0.5) 0%, $grey 100%);;

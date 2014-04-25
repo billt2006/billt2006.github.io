@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body>
+	<div class="content-wrapper">
+		<article class="post">
+			<header>
+				{% if page.image %}
+					<!-- <img alt="{{ page.image.alt }}" src="{{ page.image.src }}"/> -->
+				{% endif %}
+				<h1>{{ page.title }}</h1>
+				<time datetime="{{ page.date | date: %Y-%m-%d }}">
+					{{ page.date | date: "%B %-d, %Y" }}
+				</time>
+			</header>
+			{{ content }}
+		</article>
+		<div class="content-footer"></div>
+	</div>
+	{% include footer.html %}
+</body>
+</html>

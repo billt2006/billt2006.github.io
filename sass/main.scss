@@ -1,5 +1,7 @@
 // Normalize css
 @import "normalize";
+// Syntax css
+@import "syntax";
 // Structure
 @import "grid";
 @import "bones";
@@ -8,3 +10,5 @@
 @import "iconfont";
 // Theming
 @import "skin";
+@import "resume";
+@import "post";
