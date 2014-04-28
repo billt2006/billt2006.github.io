@@ -2,7 +2,7 @@
 @import "mixins";
 
 article.post {
-	max-width: 60em;
+	max-width: 75em;
 	margin: 0 auto;
 	// Padding 1px on top/bottom fix issues with sticky footer and margins
 	padding: 1px 1em;
@@ -19,6 +19,12 @@ article.post {
 
 		text-align: center;
 		color: $black;
+
+		img {
+			display: block;
+			margin: -2em auto 0;
+			max-height: 20em;
+		}
 
 		h1 {
 			margin: 0px 0px 0.15em;
