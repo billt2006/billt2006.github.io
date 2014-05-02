@@ -6,9 +6,9 @@ layout: nil
  
 	<title type="text" xml:lang="en">Bill Thornton</title>
 	<link type="application/atom+xml" href="http://billt.me/atom.xml" rel="self"/>
-	<link href="http://billt.me"/>
+	<link href="http://billt.me/"/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
-	<id>http://billt.me</id>
+	<id>http://billt.me/</id>
 	<author>
 		<name>Bill Thornton</name>
 	</author>
