@@ -75,64 +75,33 @@ img {
 	}
 }
 
+.blog-posts {
+	article {
+		h2 {
+			margin-top: 0;
+			margin-bottom: 0.25em;
+			text-align: center;
+		}
+		.time-wrapper {
+			text-align: center;
+		}
+	}
+}
+
 .about-me, .announcement {
 	padding: 1em;
+
+	p:first-child {
+		margin-top: 0;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
+	}
 }
 
 .grid [class*='col-'].find-me {
 	padding-right: 0.5em;
-}
-
-.resume-wrapper {
-	margin: 0;
-}
-
-.resume {
-	padding: 0 1em;
-
-	ul {
-		margin: 0;
-	}
-
-	li {
-		margin: 0.5em 0;
-	}
-
-	.objective,
-	.work,
-	.school {
-		line-height: 1.6;
-	}
-
-	.company {
-		line-height: normal;
-	}
-
-	.skills {
-		.col-1-4:nth-of-type(2) {
-			// Changes to the mobile grid cause the skills to not be cleared properly
-			margin-bottom: 2em;
-		}
-	}
-
-	.address {
-		padding-top: 1em;
-		@include breakpoint(yoda) {
-			padding-top: 0;
-		}
-	}
-
-	.title {
-		margin-bottom: 0;
-	}
-
-	.subtitle {
-		margin: 0;
-	}
-
-	.section-title {
-		margin-bottom: 0.5em;
-	}
 }
 
 .site-footer {

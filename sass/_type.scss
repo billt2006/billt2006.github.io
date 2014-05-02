@@ -10,6 +10,10 @@ body {
 	}
 }
 
+p {
+	line-height: 1.6;
+}
+
 .title-wrapper {
 	font-size: 2.5em;
 	@include breakpoint(obiwan) {
@@ -26,10 +30,6 @@ body {
 			text-align: center;
 		}
 	}
-}
-
-.about-me {
-	line-height: 1.6;
 }
 
 .social-block {
