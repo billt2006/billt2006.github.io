@@ -1,14 +1,25 @@
 <section class="blog-posts">
 	{% for post in site.posts limit:10 %}
 		<article class="grid announcement">
-			<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+			<h2>
+				{% if post.external %}
+					<a href="{{ post.external.url }}">
+						{{ post.title }}
+						<span class="external-site">[{{ post.external.site }}]</span>
+					</a>
+				{% else %}
+					<a href="{{ post.url }}">{{ post.title }}</a>
+				{% endif %}
+			</h2>
 			<div class="time-wrapper">
 				<time datetime="{{ post.date | date: %Y-%m-%d }}">
 					{{ post.date | date: "%B %-d, %Y" }}
 				</time>
 			</div>
 			{{ post.excerpt }}
-			<div class="text-right"><a href="{{ post.url }}">Read More &raquo;</a></div>
+			{% unless post.external %}
+				<div class="text-right"><a href="{{ post.url }}">Read More &raquo;</a></div>
+			{% endunless %}
 		</article>
 	{% endfor %}
 </section>

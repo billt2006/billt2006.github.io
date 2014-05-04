@@ -13,7 +13,14 @@
 					{{ page.date | date: "%B %-d, %Y" }}
 				</time>
 			</header>
-			{{ content }}
+			{% if page.external %}
+				<p>
+					You are being redirected to
+					<a href="{{ page.external.url }}">{{ page.external.url }}</a>...
+				</p>
+			{% else %}
+				{{ content }}
+			{% endif %}
 		</article>
 		<div class="content-footer"></div>
 	</div>
