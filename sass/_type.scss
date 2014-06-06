@@ -14,6 +14,15 @@ p {
 	line-height: 1.6;
 }
 
+.subheading {
+	margin-bottom: 0;
+	font-size: 1.75em;
+	@include breakpoint(yoda) {
+		padding-left: 1em;
+		font-size: 1.5em;
+	}
+}
+
 .title-wrapper {
 	font-size: 2.5em;
 	@include breakpoint(obiwan) {
@@ -35,11 +44,6 @@ p {
 .social-block {
 	text-decoration: none;
 	font-size: 1.25em;
-}
-
-.find-me {
-	font-size: 1.5em;
-	font-weight: bold;
 }
 
 .resume {
