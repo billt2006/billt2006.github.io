@@ -1,7 +1,7 @@
 @import "colors";
 @import "mixins";
 
-article.post {
+.post-wrapper {
 	max-width: 75em;
 	margin: 0 auto;
 	// Padding 1px on top/bottom fix issues with sticky footer and margins
@@ -9,7 +9,9 @@ article.post {
 
 	background: $white;
 	box-shadow: 0 0 1em darken($grey, 20%);
+}
 
+article.post {
 	header {
 		margin: -1px -1em 0px;
 		padding: 3em 0px;
@@ -46,8 +48,14 @@ article.post {
 			}
 		}
 	}
+}
 
+article.post, .comments {
 	h2 {
 		border-bottom: 0.25em solid $blueDeeper;
 	}
+}
+
+.comments {
+	margin-top: 4em;
 }

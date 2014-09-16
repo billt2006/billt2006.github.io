@@ -3,25 +3,31 @@
 {% include head.html %}
 <body>
 	<div class="content-wrapper">
-		<article class="post">
-			<header>
-				{% if page.image %}
-					<img alt="{{ page.image.alt }}" src="{{ page.image.src }}"/>
+		<div class="post-wrapper">
+			<article class="post">
+				<header>
+					{% if page.image %}
+						<img alt="{{ page.image.alt }}" src="{{ page.image.src }}"/>
+					{% endif %}
+					<h1>{{ page.title }}</h1>
+					<time datetime="{{ page.date | date: %Y-%m-%d }}">
+						{{ page.date | date: "%B %-d, %Y" }}
+					</time>
+				</header>
+				{% if page.external %}
+					<p>
+						You are being redirected to
+						<a href="{{ page.external.url }}">{{ page.external.url }}</a>...
+					</p>
+				{% else %}
+					{{ content }}
 				{% endif %}
-				<h1>{{ page.title }}</h1>
-				<time datetime="{{ page.date | date: %Y-%m-%d }}">
-					{{ page.date | date: "%B %-d, %Y" }}
-				</time>
-			</header>
-			{% if page.external %}
-				<p>
-					You are being redirected to
-					<a href="{{ page.external.url }}">{{ page.external.url }}</a>...
-				</p>
-			{% else %}
-				{{ content }}
-			{% endif %}
-		</article>
+			</article>
+			<section class="comments">
+				<h2>Comments</h2>
+				{% include comments.html %}
+			</section>
+		</div>
 		<div class="content-footer"></div>
 	</div>
 	{% include footer.html %}
