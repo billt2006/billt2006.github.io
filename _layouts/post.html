@@ -14,14 +14,7 @@
 						{{ page.date | date: "%B %-d, %Y" }}
 					</time>
 				</header>
-				{% if page.external %}
-					<p>
-						You are being redirected to
-						<a href="{{ page.external.url }}">{{ page.external.url }}</a>...
-					</p>
-				{% else %}
-					{{ content }}
-				{% endif %}
+				{{ content }}
 			</article>
 			<section class="comments">
 				<h2>Comments</h2>
