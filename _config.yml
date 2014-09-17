@@ -1,5 +1,5 @@
 exclude: [Gemfile, Gemfile.lock, Procfile, config.rb, sass]
-safe: true
+safe: false
 lsi: false
 highlighter: pygments
 
@@ -9,3 +9,6 @@ markdown: redcarpet
 
 redcarpet:
   extensions: ["hard_wrap", "no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data", "strikethrough", "superscript"]
+
+gems:
+  - jekyll-sitemap
