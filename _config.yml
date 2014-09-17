@@ -12,3 +12,9 @@ redcarpet:
 
 gems:
   - jekyll-sitemap
+
+url: http://billt.me
+name: BillT.me
+author:
+  name: Bill Thornton
+  email: bill@billt.me
