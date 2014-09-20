@@ -1,16 +1,34 @@
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
 
-    <title>{{ page.title }}</title>
+  {% if page.image %}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:src" content="{{ site.url }}{{ page.image.src }}">
+  {% else %}
+    <meta name="twitter:card" content="summary">
+  {% endif %}
+  <meta name="twitter:site" content="@billt2006">
+  <meta name="twitter:creator" content="@billt2006">
+  <meta name="twitter:title" content="{{ page.title }}">
+  {% if page.description %}
+    <meta name="twitter:description" content="{{ page.description | markdownify | strip_html | xml_escape | truncate: 200 }}">
+  {% else %}
+    <meta name="twitter:description" content="{{ page.content | markdownify | strip_html | xml_escape | truncate: 200 }}">
+  {% endif %}
+  {% if page.external %}
+    <meta name="twitter:url" content="{{ page.external.url }}">
+  {% endif %}
 
-    <link rel="alternate" type="application/atom+xml" title="{{ site.name }}" href="{{ site.url }}/atom.xml" />
+  <title>{{ page.title }}</title>
 
-    <link href='http://fonts.googleapis.com/css?family=Reenie+Beanie|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="alternate" type="application/atom+xml" title="{{ site.name }}" href="{{ site.url }}/atom.xml" />
 
-    <link rel="stylesheet" type="text/css" href="{{ site.url }}/css/main.css">
+  <link href='http://fonts.googleapis.com/css?family=Reenie+Beanie|Open+Sans:400,700' rel='stylesheet' type='text/css'>
 
-    {% include google_tracking.html %}
+  <link rel="stylesheet" type="text/css" href="{{ site.url }}/css/main.css">
+
+  {% include google_tracking.html %}
 </head>

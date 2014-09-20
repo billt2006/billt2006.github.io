@@ -16,7 +16,11 @@
 					{{ post.date | date: "%B %-d, %Y" }}
 				</time>
 			</div>
-			{{ post.excerpt }}
+			{% if post.description %}
+				{{ post.description | markdownify }}
+			{% else %}
+				{{ post.excerpt }}
+			{% endif %}
 			{% unless post.external %}
 				<div class="text-right"><a href="{{ post.url }}">Read More &raquo;</a></div>
 			{% endunless %}
