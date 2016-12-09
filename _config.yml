@@ -1,7 +1,7 @@
 exclude: [Gemfile, Gemfile.lock, Procfile, config.rb, sass]
 safe: false
 lsi: false
-highlighter: pygments
+highlighter: rouge
 
 permalink: /:categories/:title
 
